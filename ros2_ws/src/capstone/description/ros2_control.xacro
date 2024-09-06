@@ -3,6 +3,7 @@
 
     <xacro:unless value="$(arg sim_mode)">
         <ros2_control name="RealRobot" type="system">
+            <!-- original enc_cpr = 3436-->
             <hardware>
                 <plugin>diffdrive_arduino/DiffDriveArduino</plugin>
                 <param name="left_wheel_name">left_wheel_joint</param>
@@ -11,9 +12,9 @@
                 <param name="device">/dev/ttyACM0</param>
                 <param name="baud_rate">57600</param>
                 <param name="timeout">1000</param>
-                <param name="enc_counts_per_rev">6872</param>
+                <param name="enc_counts_per_rev">7726</param>
             </hardware>
-            <!-- <hardware> 3436
+            <!-- <hardware> 
                 <plugin>mock_components/GenericSystem</plugin>
                 <param name="calculate_dynamics">true</param>
             </hardware> -->

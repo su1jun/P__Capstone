@@ -1,0 +1,9 @@
+[Unit]
+Description=Check disk space and write to a file
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/disk-space-check.sh
+
+[Install]
+WantedBy=default.target
